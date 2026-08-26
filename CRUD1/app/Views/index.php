@@ -6,6 +6,7 @@
         <meta name="description" content="This is a CRUD Project in CodeIgniter version 4.7.4 PHP framework.">
         <meta name="author" content="Jimmy Jayant">
         <title>CRUD</title>
+        <link rel="stylesheet" href="<?= base_url('css/style.css'); ?>">
         <link rel="stylesheet" href="<?= base_url('css/index.css'); ?>">
     </head>
     <body>

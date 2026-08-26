@@ -6,7 +6,8 @@
         <meta name="description" content="This is a CRUD Project in CodeIgniter version 4.7.4 PHP framework.">
         <meta name="author" content="Jimmy Jayant">
         <title>CRUD - Edit User</title>
-        <link rel="stylesheet" href="<?= base_url('css/edit.css'); ?>">
+        <link rel="stylesheet" href="<?= base_url('css/style.css'); ?>">
+        <link rel="stylesheet" href="<?= base_url('css/form.css'); ?>">
     </head>
     <body>
         <header>
@@ -21,7 +22,8 @@
             <?php
                 if(isset($error))
                 {
-                    echo "<p class='error'>$error</p>";
+                    echo "<p class='error'>" . esc($error) . "</p>";
+                    unset($error);
                 }
             ?>
 
@@ -40,7 +42,8 @@
                 <br>
                 <br>
                 
-                <input type="submit" value="Submit">
+                <input type="submit" value="Submit" class="form_btn">
+                <input type="reset" value="Reset" class="form_btn">
             </form>
         </div>
 
