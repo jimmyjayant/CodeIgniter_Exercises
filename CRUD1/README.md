@@ -1,31 +1,209 @@
-This is the readme file of CRUD1 exercise in CodeIgniter version 4.7.4 framework.
-Please read the below instructions to successfully execute the exercise.
-After fulfilling the requirements mentioned in the main repository readme.md file.
+# CRUD1 Exercise – CodeIgniter 4.7.4
 
-Instructions:-
-1. Make sure that XAMPP is running in windows 11 OS in either your desktop or laptop.
-2. In XAMPP, make sure that Apache and MySQL is running.
-3. Open Terminal in the CRUD1 folder.
-4. Type the following in the terminal:- 
-    php spark db:create crud1
-    where 'crud1' is the name of the mysql database and make sure that crud1 database does not already exist.
-5. After successful execution of the above database creation command, you will see a new database 'crud1' in localhost/phpmyadmin in web browser.
-6. In the CRUD1 folder, rename the copy of the env file to .env. And open the .env file.
-7. In the .env file, set
+This README provides the steps required to successfully execute the **CRUD1 exercise** using the **CodeIgniter 4.7.4** framework on Windows 11 with XAMPP.
+
+> **Prerequisite:** First complete all the requirements mentioned in the main repository `README.md` file.
+
+## Requirements
+
+Before starting the exercise, make sure the following are installed and configured:
+
+* Windows 11
+* XAMPP
+* PHP
+* MySQL
+* CodeIgniter 4.7.4
+* A web browser
+* Terminal/Command Prompt
+
+## Setup Instructions
+
+### 1. Start XAMPP
+
+Make sure **XAMPP** is running on your Windows 11 desktop or laptop.
+
+In the XAMPP Control Panel, start the following services:
+
+* **Apache**
+* **MySQL**
+
+Both services should show as **Running**.
+
+### 2. Open the CRUD1 Project Folder
+
+Open a Terminal or Command Prompt and navigate to the **CRUD1** project folder.
+
+For example:
+
+```bash
+cd path/to/CRUD1
+```
+
+### 3. Create the MySQL Database
+
+Run the following command:
+
+```bash
+php spark db:create crud1
+```
+
+Here, `crud1` is the name of the MySQL database.
+
+> **Important:** Make sure that a database named `crud1` does **not** already exist before running this command.
+
+After successful execution, a new database named **crud1** should be created.
+
+You can verify the database by opening **phpMyAdmin** in your web browser:
+
+```text
+http://localhost/phpmyadmin
+```
+
+You should see the `crud1` database listed in phpMyAdmin.
+
+### 4. Create the `.env` File
+
+Inside the **CRUD1** project folder, locate the copy of the `env` file.
+
+Rename the copied file from:
+
+```text
+env
+```
+
+to:
+
+```text
+.env
+```
+
+Open the `.env` file in a text editor.
+
+### 5. Configure the CodeIgniter Environment
+
+In the `.env` file, set the following:
+
+```dotenv
 CI_ENVIRONMENT = development
 app.baseURL = 'http://localhost/the location to your CRUD1 project folder/public/'
-8. To setup database credentials, set the following in .env file:- 
+```
+
+Replace:
+
+```text
+the location to your CRUD1 project folder
+```
+
+with the actual location of your CRUD1 project.
+
+For example:
+
+```dotenv
+app.baseURL = 'http://localhost/CRUD1/public/'
+```
+
+Use the appropriate path according to where your project is located inside the XAMPP web directory.
+
+### 6. Configure the Database Connection
+
+In the `.env` file, configure the database settings as follows:
+
+```dotenv
 database.default.hostname = localhost
 database.default.database = crud1
 database.default.username = root
-database.default.password = 
+database.default.password =
 database.default.DBDriver = MySQLi
 database.default.DBPrefix =
 database.default.port = 3306
-9. But you can setup your own username and password. 
-10. Also, remove # from the beginning of each above lines in .env file to uncomment them before saving.
-11. In the opened terminal in CRUD1 folder, type:- 
+```
+
+If you are using a different MySQL username or password, replace the corresponding values with your own credentials.
+
+For a default XAMPP MySQL installation, the username is commonly:
+
+```text
+root
+```
+
+and the password is commonly blank.
+
+### 7. Uncomment the Configuration Lines
+
+Make sure the `#` character is removed from the beginning of each database configuration line in the `.env` file.
+
+For example, change:
+
+```dotenv
+# database.default.hostname = localhost
+```
+
+to:
+
+```dotenv
+database.default.hostname = localhost
+```
+
+Do this for all of the configuration lines listed in the previous step.
+
+Save the `.env` file after making the changes.
+
+### 8. Create the Migration
+
+Make sure the Terminal is still open in the **CRUD1** project folder.
+
+Run:
+
+```bash
 php spark make:migration users
-where users is the name of the table and press Enter.
-12. Now, copy and paste the app.baseURL in web browser and press Enter.
-And you will see the Main page of the CRUD1 exercise.
+```
+
+Here, `users` is the name associated with the migration for the users table.
+
+Press **Enter** to execute the command.
+
+CodeIgniter will create a new migration file in the project's migration directory.
+
+### 9. Open the CRUD1 Application
+
+Copy the `app.baseURL` configured in your `.env` file.
+
+For example:
+
+```text
+http://localhost/CRUD1/public/
+```
+
+Paste the URL into your web browser and press **Enter**.
+
+The **main page of the CRUD1 exercise** should now be displayed.
+
+## Quick Command Reference
+
+The main commands used during setup are:
+
+```bash
+php spark db:create crud1
+```
+
+and:
+
+```bash
+php spark make:migration users
+```
+
+## Troubleshooting
+
+If the application does not open correctly, verify the following:
+
+* Apache is running in XAMPP.
+* MySQL is running in XAMPP.
+* The `crud1` database exists in phpMyAdmin.
+* The `.env` file is located in the root of the CRUD1 project.
+* `CI_ENVIRONMENT` is set to `development`.
+* `app.baseURL` points to the correct project `public` directory.
+* Database credentials in `.env` are correct.
+* The required `.env` configuration lines are uncommented.
+* The Terminal is opened in the correct **CRUD1** project directory.
+
+After completing all the steps above, the **CRUD1 CodeIgniter 4.7.4 exercise** should be ready to run.
