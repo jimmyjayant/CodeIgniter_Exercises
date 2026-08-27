@@ -1,21 +1,147 @@
-This is the readme file of Single_File_Upload_1 exercise in CodeIgniter version 4.7.4 framework.
+# Single_File_Upload_1 — CodeIgniter 4.7.4
 
-The Single_File_Upload_1 exercise is all about uploading of file to writable/uploads folder.
-The uploaded file is validated using $this->validate() method and several validation rules like file size, and file extensions.
-Allowed file extensions are .jpg, .jpeg, .png, .pdf.
-File size must be below 10MB.
-If there is an error uploading file such as file size error, please update the upload_max_filesize in php.ini file.
+This is the **Single_File_Upload_1** exercise for the **CodeIgniter 4.7.4** framework.
 
-Please read the below instructions to successfully execute the exercise.
-After fulfilling the requirements mentioned in the main repository readme.md file.
+## About the Exercise
 
-Instructions:-
-1. Make sure that XAMPP is running in windows 11 OS in either your desktop or laptop.
-2. In XAMPP, make sure that Apache is running.
-3. In the Single_File_Upload_1 folder, rename the copy of the env file to .env. And open the .env file.
-4. In the .env file, set
+The **Single_File_Upload_1** exercise demonstrates how to upload a single file to the `writable/uploads` folder in CodeIgniter 4.
+
+The uploaded file is validated using the `$this->validate()` method along with validation rules for file size and file extensions.
+
+### File Upload Validation Rules
+
+The following validation rules are applied to the uploaded file:
+
+* **Allowed file extensions:**
+
+  * `.jpg`
+  * `.jpeg`
+  * `.png`
+  * `.pdf`
+* **Maximum file size:** Below **10 MB**
+* Uploaded files are stored in:
+
+```text
+writable/uploads/
+```
+
+> **Important:** If you encounter an error while uploading a file, particularly a file-size-related error, check the `upload_max_filesize` setting in your `php.ini` file and increase it as required.
+
+## Requirements
+
+Before executing this exercise, make sure you have fulfilled all the requirements mentioned in the **main repository `README.md` file**.
+
+## Instructions
+
+Follow these steps to successfully execute the **Single_File_Upload_1** exercise.
+
+### 1. Start XAMPP
+
+Make sure **XAMPP** is installed and running on your **Windows 11** desktop or laptop.
+
+### 2. Start Apache
+
+Open the XAMPP Control Panel and make sure that **Apache** is running.
+
+### 3. Configure the `.env` File
+
+Navigate to the `Single_File_Upload_1` exercise folder.
+
+Rename the copy of the `env` file to:
+
+```text
+.env
+```
+
+Open the `.env` file in a text editor.
+
+### 4. Configure the Environment and Base URL
+
+In the `.env` file, set the following values:
+
+```dotenv
 CI_ENVIRONMENT = development
-app.baseURL = 'http://localhost/the location to your Single_File_Upload_1 project folder/public/' 
-5. Also, remove # from the beginning of each above lines in .env file to uncomment them before saving.
-6. Now, copy and paste the app.baseURL in web browser and press Enter.
-7. And you will see the Main page of the Single_File_Upload_1 exercise.
+app.baseURL = 'http://localhost/the-location-to-your-Single_File_Upload_1-project-folder/public/'
+```
+
+Replace:
+
+```text
+the-location-to-your-Single_File_Upload_1-project-folder
+```
+
+with the actual location/path of your `Single_File_Upload_1` project folder.
+
+For example:
+
+```dotenv
+app.baseURL = 'http://localhost/Single_File_Upload_1/public/'
+```
+
+### 5. Uncomment the Configuration
+
+Make sure the `#` character is removed from the beginning of each of the above configuration lines.
+
+For example:
+
+```dotenv
+CI_ENVIRONMENT = development
+app.baseURL = 'http://localhost/Single_File_Upload_1/public/'
+```
+
+Save the `.env` file after making these changes.
+
+### 6. Check `upload_max_filesize`
+
+If you encounter an error while uploading a file because of its size, open the PHP configuration file:
+
+```text
+php.ini
+```
+
+Locate the following setting:
+
+```ini
+upload_max_filesize
+```
+
+Make sure its value is sufficient for the exercise. For example:
+
+```ini
+upload_max_filesize = 10M
+```
+
+After modifying `php.ini`, restart Apache from the XAMPP Control Panel for the changes to take effect.
+
+> **Note:** The application-level validation requires the file to be **below 10 MB**. The PHP `upload_max_filesize` setting should be configured appropriately so that PHP does not reject the upload before CodeIgniter can validate it.
+
+### 7. Open the Application
+
+Copy the configured `app.baseURL` from the `.env` file and paste it into your web browser.
+
+Press **Enter**.
+
+### 8. View the Main Page
+
+The **Main Page** of the **Single_File_Upload_1** exercise should now be displayed in your web browser.
+
+You can then select a file and test the file-upload and validation functionality.
+
+## Upload Location
+
+Successfully uploaded files are stored in:
+
+```text
+writable/uploads/
+```
+
+## Summary
+
+This exercise demonstrates single-file uploading and validation in CodeIgniter 4.7.4 using:
+
+* `$this->validate()`
+* File extension validation
+* File size validation
+* Single-file uploading
+* Storing uploaded files in `writable/uploads/`
+* Handling file-upload validation errors
