@@ -38,8 +38,15 @@ For example:
 ```bash
 cd path/to/CRUD1
 ```
+### 3. Install All Required Dependencies
 
-### 3. Create the MySQL Database
+Run the following command in terminal or git:
+
+```bash
+composer install
+```
+
+### 4. Create the MySQL Database
 
 Run the following command:
 
@@ -61,7 +68,7 @@ http://localhost/phpmyadmin
 
 You should see the `crud1` database listed in phpMyAdmin.
 
-### 4. Create the `.env` File
+### 5. Create the `.env` File
 
 Inside the **CRUD1** project folder, locate the copy of the `env` file.
 
@@ -79,7 +86,7 @@ to:
 
 Open the `.env` file in a text editor.
 
-### 5. Configure the CodeIgniter Environment
+### 6. Configure the CodeIgniter Environment
 
 In the `.env` file, set the following:
 
@@ -104,7 +111,7 @@ app.baseURL = 'http://localhost/CRUD1/public/'
 
 Use the appropriate path according to where your project is located inside the XAMPP web directory.
 
-### 6. Configure the Database Connection
+### 7. Configure the Database Connection
 
 In the `.env` file, configure the database settings as follows:
 
@@ -128,7 +135,7 @@ root
 
 and the password is commonly blank.
 
-### 7. Uncomment the Configuration Lines
+### 8. Uncomment the Configuration Lines
 
 Make sure the `#` character is removed from the beginning of each database configuration line in the `.env` file.
 
@@ -148,7 +155,7 @@ Do this for all of the configuration lines listed in the previous step.
 
 Save the `.env` file after making the changes.
 
-### 8. Create the Migration
+### 9. Create the Migration
 
 Make sure the Terminal is still open in the **CRUD1** project folder.
 
@@ -164,7 +171,7 @@ Press **Enter** to execute the command.
 
 CodeIgniter will create a new migration file in the project's migration directory.
 
-### 9. Open the CRUD1 Application
+### 10. Open the CRUD1 Application
 
 Copy the `app.baseURL` configured in your `.env` file.
 

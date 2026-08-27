@@ -38,7 +38,15 @@ Make sure **XAMPP** is installed and running on your **Windows 11** desktop or l
 
 Open the XAMPP Control Panel and make sure that **Apache** is running.
 
-### 3. Configure the `.env` File
+### 3. Install All Required Dependencies
+
+Run the following command in terminal or git:
+
+```bash
+composer install
+```
+
+### 4. Configure the `.env` File
 
 Navigate to the `Form_Validation_1` exercise folder.
 
@@ -50,7 +58,7 @@ Rename the copy of the `env` file to:
 
 Open the `.env` file in a text editor.
 
-### 4. Configure the Environment and Base URL
+### 5. Configure the Environment and Base URL
 
 In the `.env` file, set the following values:
 
@@ -73,7 +81,7 @@ For example:
 app.baseURL = 'http://localhost/Form_Validation_1/public/'
 ```
 
-### 5. Uncomment the Configuration
+### 6. Uncomment the Configuration
 
 Make sure the `#` character is removed from the beginning of each of the above configuration lines.
 
@@ -86,13 +94,13 @@ app.baseURL = 'http://localhost/Form_Validation_1/public/'
 
 Save the `.env` file after making these changes.
 
-### 6. Open the Application
+### 7. Open the Application
 
 Copy the configured `app.baseURL` from the `.env` file and paste it into your web browser.
 
 Press **Enter**.
 
-### 7. View the Main Page
+### 8. View the Main Page
 
 The **Main Page** of the **Form_Validation_1** exercise should now be displayed in your web browser.
 
