@@ -36,6 +36,7 @@
                 
                 <input type="submit" value="Submit" class="form_btn">
                 <input type="reset" value="Reset" class="form_btn">
+                <?= csrf_field(); ?>
             </form>
         </div>
 
