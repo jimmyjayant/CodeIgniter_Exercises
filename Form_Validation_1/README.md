@@ -117,4 +117,3 @@ This exercise demonstrates basic form validation in CodeIgniter 4.7.4 using:
 * Password length validation
 * Handling validation errors
 * Displaying a successful login page after valid input
-

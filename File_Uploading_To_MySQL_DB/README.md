@@ -38,6 +38,7 @@ For example:
 ```bash
 cd path/to/File_Uploading_To_MySQL_DB
 ```
+
 ### 3. Install All Required Dependencies
 
 Run the following command in terminal or git:
@@ -46,29 +47,7 @@ Run the following command in terminal or git:
 composer install
 ```
 
-### 4. Create the MySQL Database
-
-Run the following command:
-
-```bash
-php spark db:create file_uploading
-```
-
-Here, `file_uploading` is the name of the MySQL database.
-
-> **Important:** Make sure that a database named `file_uploading` does **not** already exist before running this command.
-
-After successful execution, a new database named **file_uploading** should be created.
-
-You can verify the database by opening **phpMyAdmin** in your web browser:
-
-```text
-http://localhost/phpmyadmin
-```
-
-You should see the `file_uploading` database listed in phpMyAdmin.
-
-### 5. Create the `.env` File
+### 4. Create the `.env` File
 
 Inside the **File_Uploading_To_MySQL_DB** project folder, locate the copy of the `env` file.
 
@@ -86,7 +65,7 @@ to:
 
 Open the `.env` file in a text editor.
 
-### 6. Configure the CodeIgniter Environment
+### 5. Configure the CodeIgniter Environment
 
 In the `.env` file, set the following:
 
@@ -111,7 +90,7 @@ app.baseURL = 'http://localhost/File_Uploading_To_MySQL_DB/public/'
 
 Use the appropriate path according to where your project is located inside the XAMPP web directory.
 
-### 7. Configure the Database Connection
+### 6. Configure the Database Connection
 
 In the `.env` file, configure the database settings as follows:
 
@@ -135,7 +114,7 @@ root
 
 and the password is commonly blank.
 
-### 8. Uncomment the Configuration Lines
+### 7. Uncomment the Configuration Lines
 
 Make sure the `#` character is removed from the beginning of each database configuration line in the `.env` file.
 
@@ -154,6 +133,28 @@ database.default.hostname = localhost
 Do this for all of the configuration lines listed in the previous step.
 
 Save the `.env` file after making the changes.
+
+### 8. Create the MySQL Database
+
+Run the following command in the terminal:
+
+```bash
+php spark db:create file_uploading
+```
+
+Here, `file_uploading` is the name of the MySQL database.
+
+> **Important:** Make sure that a database named `file_uploading` does **not** already exist before running this command.
+
+After successful execution, a new database named **file_uploading** should be created.
+
+You can verify the database by opening **phpMyAdmin** in your web browser:
+
+```text
+http://localhost/phpmyadmin
+```
+
+You should see the `file_uploading` database listed in phpMyAdmin.
 
 ### 9. Create the Migration
 
