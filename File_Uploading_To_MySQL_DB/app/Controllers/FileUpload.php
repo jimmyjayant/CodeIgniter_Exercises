@@ -34,7 +34,7 @@ class FileUpload extends BaseController
             ]
         ];
 
-        // Run Validation
+        // Run Validation on requested data that is uploaded file
         if(!$this->validate($validationRules))
         {
             return redirect()->back()->with('error', $this->validator->getErrors());

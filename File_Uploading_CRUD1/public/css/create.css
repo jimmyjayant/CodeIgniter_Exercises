@@ -1,0 +1,53 @@
+form {
+    width:60%;
+    min-width:200px;
+    max-width:600px;
+    margin:1rem auto;
+    padding:1rem;
+    border:2px solid black;
+    border-radius:1rem;
+    text-align:center;
+}
+
+form label {
+    font-size:clamp(1rem, 2vw, 1.5rem);
+    padding:1rem;
+    margin:1rem;
+    font-weight:bold;
+}
+
+form input {
+    font-size:clamp(1rem, 2vw, 1.5rem);
+    padding:1rem;
+    margin:0.5rem;
+}
+
+.form_btn {
+    border:2px solid black;
+    border-radius:1rem;
+    padding:0.5rem 1rem;
+    margin:1rem;
+    font-size:clamp(1rem, 2vw, 1.2rem);
+    cursor:pointer;
+}
+
+.form_btn:hover {
+    background-color:grey;
+    font-weight:bold;
+}
+
+a {
+    display:inline-block;
+    text-decoration:none;
+    font-size:1rem;
+    color:white;
+    background-color:lightgreen;
+    cursor:pointer;
+    padding:0.5rem 1rem;
+    border-radius:1rem;
+}
+
+a:hover {
+    background-color:green;
+    font-weight:bold;
+}

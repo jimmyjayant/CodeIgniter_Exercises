@@ -1,0 +1,84 @@
+table {
+    width:80%;
+    margin:1rem auto;
+    border:2px solid black;
+    border-collapse:collapse;
+}
+
+table th, td {
+    text-align:center;
+    font-size:1rem;
+    padding:0.5rem;
+    border:2px solid black;
+}
+
+table a {
+    display:inline-block;
+    text-decoration:none;
+    font-size:1rem;
+    color:white;
+    background-color:lightgreen;
+    cursor:pointer;
+    padding:0.5rem 1rem;
+    border-radius:1rem;
+    margin:0.3rem;
+}
+
+table a:hover {
+    background-color:green;
+    font-weight:bold;
+}
+
+.newRecord {
+    margin:0;
+    padding:1rem;
+    text-align:center;
+}
+
+.newRecord a {
+    display:inline-block;
+    text-decoration:none;
+    font-size:2rem;
+    color:white;
+    background-color:lightgreen;
+    cursor:pointer;
+    padding:1rem 2rem;
+    border-radius:1rem;
+}
+
+.newRecord a:hover {
+    background-color:green;
+    font-weight:bold;
+}
+
+.pager {
+    margin:1rem;
+    padding:1rem;
+}
+
+ul.pagination {
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:row;
+    list-style-type:none;
+    justify-content:center;
+    align-items:center;
+    gap:1rem;
+    margin:1rem;
+}
+
+.pagination a {
+    display:inline-block;
+    font-size:1.5rem;
+    text-decoration:none;
+    padding:0.3rem 0.5rem;
+    border:2px solid black;
+    border-radius:1rem;
+    margin:1rem;
+}
+
+.pagination a:hover {
+    font-weight:bold;
+    background-color:green;
+    color:white;
+}

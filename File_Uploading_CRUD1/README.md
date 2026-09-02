@@ -1,6 +1,6 @@
-# File_Uploading_To_MySQL_DB Exercise – CodeIgniter 4.7.4
+# File_Uploading_CRUD1 Exercise – CodeIgniter 4.7.4
 
-This README provides the steps required to successfully execute the **File_Uploading_To_MySQL_DB exercise** using the **CodeIgniter 4.7.4** framework on Windows 11 with XAMPP.
+This README provides the steps required to successfully execute the **File_Uploading_CRUD1 exercise** using the **CodeIgniter 4.7.4** framework on Windows 11 with XAMPP.
 
 > **Prerequisite:** First complete all the requirements mentioned in the main repository `README.md` file.
 
@@ -28,14 +28,14 @@ In the XAMPP Control Panel, start the following services:
 
 Both services should show as **Running**.
 
-### 2. Open the File_Uploading_To_MySQL_DB Project Folder
+### 2. Open the File_Uploading_CRUD1 Project Folder
 
-Open a Terminal or Command Prompt and navigate to the **File_Uploading_To_MySQL_DB** project folder.
+Open a Terminal or Command Prompt and navigate to the **File_Uploading_CRUD1** project folder.
 
 For example:
 
 ```bash
-cd path/to/File_Uploading_To_MySQL_DB
+cd path/to/File_Uploading_CRUD1
 ```
 
 ### 3. Install All Required Dependencies
@@ -48,7 +48,7 @@ composer install
 
 ### 4. Create the `.env` File
 
-Inside the **File_Uploading_To_MySQL_DB** project folder, locate the copy of the `env` file.
+Inside the **File_Uploading_CRUD1** project folder, locate the copy of the `env` file.
 
 Rename the copied file from:
 
@@ -70,21 +70,21 @@ In the `.env` file, set the following:
 
 ```dotenv
 CI_ENVIRONMENT = development
-app.baseURL = 'http://localhost/the location to your File_Uploading_To_MySQL_DB project folder/public/'
+app.baseURL = 'http://localhost/the location to your File_Uploading_CRUD1 project folder/public/'
 ```
 
 Replace:
 
 ```text
-the location to your File_Uploading_To_MySQL_DB project folder
+the location to your File_Uploading_CRUD1 project folder
 ```
 
-with the actual location of your File_Uploading_To_MySQL_DB project.
+with the actual location of your File_Uploading_CRUD1 project.
 
 For example:
 
 ```dotenv
-app.baseURL = 'http://localhost/File_Uploading_To_MySQL_DB/public/'
+app.baseURL = 'http://localhost/File_Uploading_CRUD1/public/'
 ```
 
 Use the appropriate path according to where your project is located inside the XAMPP web directory.
@@ -95,7 +95,7 @@ In the `.env` file, configure the database settings as follows:
 
 ```dotenv
 database.default.hostname = localhost
-database.default.database = file_uploading
+database.default.database = ci4_file_upload_crud
 database.default.username = root
 database.default.password =
 database.default.DBDriver = MySQLi
@@ -138,14 +138,14 @@ Save the `.env` file after making the changes.
 Run the following command in the terminal:
 
 ```bash
-php spark db:create file_uploading
+php spark db:create ci4_file_upload_crud
 ```
 
-Here, `file_uploading` is the name of the MySQL database.
+Here, `ci4_file_upload_crud` is the name of the MySQL database.
 
-> **Important:** Make sure that a database named `file_uploading` does **not** already exist before running this command.
+> **Important:** Make sure that a database named `ci4_file_upload_crud` does **not** already exist before running this command.
 
-After successful execution, a new database named **file_uploading** should be created.
+After successful execution, a new database named **ci4_file_upload_crud** should be created.
 
 You can verify the database by opening **phpMyAdmin** in your web browser:
 
@@ -153,48 +153,48 @@ You can verify the database by opening **phpMyAdmin** in your web browser:
 http://localhost/phpmyadmin
 ```
 
-You should see the `file_uploading` database listed in phpMyAdmin.
+You should see the `ci4_file_upload_crud` database listed in phpMyAdmin.
 
 ### 9. Create the Migration
 
-Make sure the Terminal is still open in the **File_Uploading_To_MySQL_DB** project folder.
+Make sure the Terminal is still open in the **File_Uploading_CRUD1** project folder.
 
 Run:
 
 ```bash
-php spark migrate files
+php spark migrate --name FileCrud
 ```
 
 Press **Enter** to execute the command.
 
-CodeIgniter will run all pending migrations in the project's migration directory.
+CodeIgniter will specified pending migration in the project's migration directory.
 
-### 10. Open the File_Uploading_To_MySQL_DB Application
+### 10. Open the File_Uploading_CRUD1 Application
 
 Copy the `app.baseURL` configured in your `.env` file.
 
 For example:
 
 ```text
-http://localhost/File_Uploading_To_MySQL_DB/public/
+http://localhost/File_Uploading_CRUD1/public/
 ```
 
 Paste the URL into your web browser and press **Enter**.
 
-The **main page of the File_Uploading_To_MySQL_DB exercise** should now be displayed.
+The **main page of the File_Uploading_CRUD1 exercise** should now be displayed.
 
 ## Quick Command Reference
 
 The main commands used during setup are:
 
 ```bash
-php spark db:create file_uploading
+php spark db:create ci4_file_upload_crud
 ```
 
 and:
 
 ```bash
-php spark migrate
+php spark migrate --name FileCrud
 ```
 
 ## Troubleshooting
@@ -203,12 +203,12 @@ If the application does not open correctly, verify the following:
 
 * Apache is running in XAMPP.
 * MySQL is running in XAMPP.
-* The `file_uploading` database exists in phpMyAdmin.
-* The `.env` file is located in the root of the File_Uploading_To_MySQL_DB project.
+* The `ci4_file_upload_crud` database exists in phpMyAdmin.
+* The `.env` file is located in the root of the File_Uploading_CRUD1 project.
 * `CI_ENVIRONMENT` is set to `development`.
 * `app.baseURL` points to the correct project `public` directory.
 * Database credentials in `.env` are correct.
 * The required `.env` configuration lines are uncommented.
-* The Terminal is opened in the correct **File_Uploading_To_MySQL_DB** project directory.
+* The Terminal is opened in the correct **File_Uploading_CRUD1** project directory.
 
-After completing all the steps above, the **File_Uploading_To_MySQL_DB CodeIgniter 4.7.4 exercise** should be ready to run.
+After completing all the steps above, the **File_Uploading_CRUD1 CodeIgniter 4.7.4 exercise** should be ready to run.
