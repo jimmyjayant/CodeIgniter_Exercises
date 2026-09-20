@@ -1,0 +1,22 @@
+.main > div:last-child {
+    font-size:clamp(1rem, 2vw, 1.5rem);
+    text-align:center;
+    line-height:1.5;
+}
+
+.main > div:last-child a {
+    text-decoration:none;
+    display:inline-block;
+    padding:1rem 2rem;
+    margin:1rem;
+    background-color:lightgrey;
+    color:white;
+    border-radius:1rem;
+}
+
+.main > div:last-child a:hover {
+    cursor:pointer;
+    background-color:grey;
+    color:black;
+    font-weight:bold;
+}

@@ -1,0 +1,22 @@
+.main p {
+    text-align:center;
+    font-size:clamp(1rem, 2vw, 2.5rem);
+    line-height:2;
+}
+
+.main .linkbutton {
+    text-decoration:none;
+    display:inline-block;
+    padding:1rem 2rem;
+    margin:1rem;
+    background-color:lightgrey;
+    color:white;
+    border-radius:1rem;
+}
+
+.main .linkbutton:hover {
+    cursor:pointer;
+    background-color:grey;
+    color:black;
+    font-weight:bold;
+}
