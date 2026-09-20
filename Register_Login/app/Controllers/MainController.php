@@ -283,7 +283,8 @@ class MainController extends BaseController
                     }
 
                     // Removes all session data and destroys the session.
-                    session()->destroy();
+                    // session()->destroy();
+                    session()->remove(['username', 'loggedIn', 'token']);
 
                     // session()->setFlashdata('success', 'User Logged out successfully!');
                     return redirect()->to('/login')->with('success', 'User Logged out successfully!');
